@@ -14,8 +14,11 @@ export default {
   ssr: true,
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
+  css: [
+    { src: '~/assets/scss/variables.scss', lang: 'scss' },
     '~/assets/css/sanitize.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['@/plugins/composition-api', '~/plugins/fontawesome.js'],
