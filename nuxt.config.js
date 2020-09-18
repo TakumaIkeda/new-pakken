@@ -36,6 +36,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    ['nuxt-sass-resources-loader', ['~/assets/scss/variables.scss']],
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
