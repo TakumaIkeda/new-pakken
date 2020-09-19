@@ -1,23 +1,31 @@
 <template>
   <div>
-    <AppHeader></AppHeader>
+    <header class="header">
+      <nuxt-link to="/">
+        <img src="@/assets/images/logo.png" alt="ロゴ" class="header-logo" />
+      </nuxt-link>
+    </header>
     <Nuxt />
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import '@/assets/scss/variables.scss';
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+
+.header {
+  padding: 1rem;
+  background-color: $primary;
+}
+
+.header-logo {
+  width: 5rem;
+}
 </style>
 
 <script>
-import { defineComponent } from '@vue/composition-api';
-import AppHeader from '@/components/organisms/AppHeader';
-export default defineComponent({
-  components: {
-    AppHeader,
-  },
-});
+export default {};
 </script>
