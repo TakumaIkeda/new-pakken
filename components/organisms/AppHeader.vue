@@ -1,30 +1,19 @@
 <template>
-  <header>
-    <div class="header">
-      <LogoLink></LogoLink>
-    </div>
-  </header>
+  <header class="header"></header>
 </template>
 
-<script>
-import { defineComponent } from '@vue/composition-api';
-import LogoLink from '@/components/molecules/LogoLink';
-export default defineComponent({
-  components: {
-    LogoLink,
-  },
-});
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator';
+
+@Component
+export class AppHeader extends Vue {}
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import '@/assets/scss/variables.scss';
-header {
-  background-color: $primary;
-  padding: 1rem;
-  width: 100%;
-}
-
 .header {
-  display: inline-flex;
+  height: 4rem;
+  background-color: $primary;
+  display: flex;
 }
 </style>
