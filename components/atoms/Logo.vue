@@ -1,5 +1,5 @@
 <template>
-  <img src="@/assets/logo.png" :width="width" alt="ロゴ" />
+  <img src="@/assets/images.logo.png" :width="width" alt="ロゴ" />
 </template>
 <script>
 import { defineComponent } from '@vue/composition-api';
