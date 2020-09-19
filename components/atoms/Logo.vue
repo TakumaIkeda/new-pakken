@@ -1,15 +1,14 @@
 <template>
-  <img src="@/assets/logo.png" :width="width" alt="ロゴ" />
+  <img src="@/assets/images.logo.png" :width="width" alt="ロゴ" />
 </template>
-<script>
-import { defineComponent } from '@vue/composition-api';
-export default defineComponent({
-  props: {
-    width: {
-      type: String,
-      required: false,
-    },
-  },
-});
+
+<script lang="ts">
+import { Component, Prop, Vue } from 'nuxt-property-decorator';
+
+@Component
+export class Logo extends Vue {
+  @Prop({ default: '100rem' }) readonly width!: string;
+}
 </script>
+
 <style lang="scss"></style>
